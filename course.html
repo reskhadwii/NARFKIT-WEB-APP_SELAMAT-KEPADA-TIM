@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NARF KIT - Course</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="course.css">
+</head>
+<body>
+
+<nav class="navigasi-siswa">
+  <div class="narfkit"><span class="narf">NARF</span><span class="kit">KIT</span></div>
+  <div class="menu">
+    <a href="dashboardsiswa.html" class="menu-item">DASHBOARD</a>
+    <a href="#" class="menu-item active">COURSE</a>
+    <a href="simulation.html" class="menu-item">SIMULATION</a>
+    <a href="chatbot.html" class="menu-item">CHATBOT</a>
+  </div>
+  <div class="nav-right">
+    <svg viewBox="0 0 60 60" fill="none"><path d="M7.5 38.75L17.14 30.72C21.23 27.31 23.91 27.66 27.44 31.19L27.46 31.2C31.3 35.05 34.06 34.89 37.89 31.54L52.5 18.75" stroke="#FE7F42" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M52.5 52.5H23.5C17.9 52.5 15.1 52.5 12.96 51.41C11.08 50.45 9.55 48.92 8.59 47.04C7.5 44.9 7.5 42.1 7.5 36.5V7.5" stroke="#FE7F42" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <svg viewBox="0 0 60 60" fill="none"><path d="M22.5 42.5V45C22.5 46.99 23.29 48.9 24.7 50.3C26.1 51.71 28.01 52.5 30 52.5C31.99 52.5 33.9 51.71 35.3 50.3C36.71 48.9 37.5 46.99 37.5 45V42.5M25 12.5C25 11.17 25.53 9.9 26.46 8.96C27.4 8.03 28.67 7.5 30 7.5C31.33 7.5 32.6 8.03 33.54 8.96C34.47 9.9 35 11.17 35 12.5C37.87 13.86 40.32 15.97 42.08 18.61C43.84 21.26 44.85 24.33 45 27.5V35C45.19 36.55 45.74 38.04 46.61 39.35C47.48 40.65 48.64 41.73 50 42.5H10C11.36 41.73 12.52 40.65 13.39 39.35C14.26 38.04 14.81 36.55 15 35V27.5C15.15 24.33 16.16 21.26 17.92 18.61C19.68 15.97 22.13 13.86 25 12.5Z" stroke="#FE7F42" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <svg viewBox="0 0 60 60" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M40 22.5C40 25.15 38.95 27.7 37.07 29.57C35.2 31.45 32.65 32.5 30 32.5C27.35 32.5 24.8 31.45 22.93 29.57C21.05 27.7 20 25.15 20 22.5C20 19.85 21.05 17.3 22.93 15.43C24.8 13.55 27.35 12.5 30 12.5C32.65 12.5 35.2 13.55 37.07 15.43C38.95 17.3 40 19.85 40 22.5ZM35 22.5C35 23.83 34.47 25.1 33.54 26.04C32.6 26.97 31.33 27.5 30 27.5C28.67 27.5 27.4 26.97 26.46 26.04C25.53 25.1 25 23.83 25 22.5C25 21.17 25.53 19.9 26.46 18.96C27.4 18.03 28.67 17.5 30 17.5C31.33 17.5 32.6 18.03 33.54 18.96C34.47 19.9 35 21.17 35 22.5Z" fill="#FE7F42"/><path fill-rule="evenodd" clip-rule="evenodd" d="M30 2.5C14.81 2.5 2.5 14.81 2.5 30C2.5 45.19 14.81 57.5 30 57.5C45.19 57.5 57.5 45.19 57.5 30C57.5 14.81 45.19 2.5 30 2.5ZM7.5 30C7.5 35.23 9.28 40.04 12.27 43.86C14.37 41.1 17.08 38.87 20.18 37.33C23.28 35.8 26.7 35 30.16 35C33.58 35 36.96 35.77 40.03 37.27C43.1 38.77 45.79 40.95 47.89 43.65C50.06 40.8 51.52 37.49 52.15 33.97C52.78 30.45 52.56 26.84 51.52 23.42C50.47 20 48.63 16.89 46.14 14.33C43.65 11.76 40.59 9.83 37.2 8.69C33.82 7.54 30.21 7.22 26.67 7.75C23.14 8.28 19.78 9.64 16.88 11.72C13.98 13.81 11.61 16.55 9.98 19.73C8.35 22.91 7.5 26.43 7.5 30ZM30 52.5C24.83 52.51 19.83 50.73 15.82 47.47C17.43 45.16 19.58 43.28 22.08 41.98C24.57 40.68 27.35 40 30.16 40C32.94 40 35.68 40.66 38.16 41.93C40.63 43.2 42.77 45.04 44.39 47.3C40.35 50.67 35.26 52.51 30 52.5Z" fill="#FE7F42"/></svg>
+    <button class="theme-toggle" id="theme-toggle" title="Ganti tema">
+      <svg id="icon-moon" viewBox="0 0 24 24" fill="none" stroke="#fe7f42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+      <svg id="icon-sun" viewBox="0 0 24 24" fill="none" stroke="#fe7f42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+    </button>
+  </div>
+</nav>
+
+<!-- ===== VIEW KATALOG ===== -->
+<div id="view-katalog" class="view active">
+  <div id="peringatan-pretest" class="warning-box">
+    Peringatan: Kamu belum menyelesaikan Asesmen Awal. Silakan kembali ke Dashboard untuk mengambil pre-test agar materi terbuka!
+  </div>
+  <div id="katalog-container"></div>
+</div>
+
+<!-- ===== VIEW BELAJAR ===== -->
+<div id="view-belajar" class="view">
+  <div class="header-belajar">
+    <button class="btn-back" onclick="kembaliKeKatalog()">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      Kembali ke Katalog
+    </button>
+    <div class="judul-materi-aktif" id="judul-materi-header"></div>
+  </div>
+
+  <div class="belajar-layout">
+    <div class="main-video">
+
+      <!-- VIDEO PLAYER -->
+      <video id="materi-video" controls onended="aktifkanKuis()">
+        Browser kamu tidak mendukung video HTML5.
+      </video>
+
+      <div id="area-kuis" class="area-kuis" style="opacity:0.5; pointer-events:none;">
+        <h3>Quiz Modul <span id="quiz-modul-nomor"></span></h3>
+        <p class="soal-teks" id="teks-instruksi-kuis">Selesaikan video di atas untuk mengaktifkan kuis dan membuka modul berikutnya.</p>
+
+        <div id="soal-container" style="display:none;">
+          <p class="soal-teks" id="teks-soal"></p>
+          <div class="kuis-opsi-list" id="opsi-container"></div>
+        </div>
+
+        <button id="btn-submit-kuis" class="btn-submit-kuis" disabled onclick="selesaiKuis()">
+          Kumpulkan Jawaban
+        </button>
+      </div>
+    </div>
+
+    <div class="sidebar-modul">
+      <div class="sidebar-judul">Daftar Modul</div>
+      <div id="daftar-modul-container"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== VIEW PROJECT AKHIR ===== -->
+<div id="view-project" class="view">
+  <div class="header-belajar">
+    <button class="btn-back" onclick="kembaliKeKatalog()">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      Kembali ke Katalog
+    </button>
+  </div>
+
+  <div class="project-judul" id="project-judul"></div>
+  <div class="project-deskripsi" id="project-deskripsi"></div>
+
+  <div class="project-section">
+    <h3>Panduan Project</h3>
+    <ol class="guide-list" id="project-guide-list"></ol>
+  </div>
+
+  <div class="project-section">
+    <h3>Business Model Canvas</h3>
+    <div class="bmc-grid">
+      <div class="bmc-block"><label>Key Partners</label><textarea id="bmc-partners" placeholder="Siapa mitra kunci kamu?"></textarea></div>
+      <div class="bmc-block"><label>Key Activities</label><textarea id="bmc-activities" placeholder="Aktivitas utama apa saja?"></textarea></div>
+      <div class="bmc-block"><label>Value Proposition</label><textarea id="bmc-value" placeholder="Apa nilai unik produkmu?"></textarea></div>
+      <div class="bmc-block"><label>Customer Relationships</label><textarea id="bmc-relationship" placeholder="Bagaimana cara menjaga hubungan pelanggan?"></textarea></div>
+      <div class="bmc-block"><label>Customer Segments</label><textarea id="bmc-segments" placeholder="Siapa target penggunamu?"></textarea></div>
+      <div class="bmc-block"><label>Key Resources</label><textarea id="bmc-resources" placeholder="Sumber daya apa yang dibutuhkan?"></textarea></div>
+      <div class="bmc-block"><label>Channels</label><textarea id="bmc-channels" placeholder="Lewat mana produk sampai ke user?"></textarea></div>
+      <div class="bmc-block"><label>Cost Structure</label><textarea id="bmc-cost" placeholder="Apa saja biaya yang dikeluarkan?"></textarea></div>
+      <div class="bmc-block"><label>Revenue Streams</label><textarea id="bmc-revenue" placeholder="Dari mana sumber pendapatan?"></textarea></div>
+    </div>
+  </div>
+
+  <div class="project-section">
+    <h3>Analisis SWOT</h3>
+    <div class="swot-grid">
+      <div class="swot-block strength"><label>Strengths (Kekuatan)</label><textarea id="swot-s" placeholder="Apa kelebihan project ini?"></textarea></div>
+      <div class="swot-block weakness"><label>Weaknesses (Kelemahan)</label><textarea id="swot-w" placeholder="Apa kekurangannya?"></textarea></div>
+      <div class="swot-block opportunity"><label>Opportunities (Peluang)</label><textarea id="swot-o" placeholder="Peluang apa yang bisa diraih?"></textarea></div>
+      <div class="swot-block threat"><label>Threats (Ancaman)</label><textarea id="swot-t" placeholder="Tantangan/ancaman apa yang ada?"></textarea></div>
+    </div>
+    <button class="btn-simpan-project" onclick="simpanProject()">Simpan BMC & SWOT</button>
+    <div class="save-status" id="save-status"></div>
+  </div>
+
+  <div class="project-section">
+    <h3> Simulasi</h3>
+    <p style="font-size:14px; color:#dda39e; margin-bottom:16px;">Uji coba rangkaian dan model machine learning project kamu di Simulation Lab.</p>
+    <button class="btn-buka-simulasi" onclick="window.open('simulation.html', '_blank')">
+      ▶ Buka Simulasi
+    </button>
+  </div>
+
+  <div class="project-section">
+    <h3>Kumpulkan Project</h3>
+    <div class="submission-box">
+      <div class="submission-row">
+        <span>Laporan Akhir (PDF)</span>
+        <a class="btn-upload-link" id="link-laporan" href="#" target="_blank">Upload via Form ↗</a>
+      </div>
+      <div class="submission-row">
+        <span>Video Demo Project</span>
+        <a class="btn-upload-link" id="link-video" href="#" target="_blank">Upload via Form ↗</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// =====================================================
+// THEME (LIGHT / DARK) — sinkron dengan dashboard
+// =====================================================
+function applyTheme(theme) {
+  document.documentElement.setAttribute('data-theme', theme)
+  localStorage.setItem('narfkit_theme', theme)
+  document.getElementById('icon-moon').style.display = theme === 'dark' ? 'block' : 'none'
+  document.getElementById('icon-sun').style.display = theme === 'light' ? 'block' : 'none'
+}
+applyTheme(localStorage.getItem('narfkit_theme') || 'dark')
+document.getElementById('theme-toggle').addEventListener('click', () => {
+  const current = document.documentElement.getAttribute('data-theme') || 'dark'
+  applyTheme(current === 'dark' ? 'light' : 'dark')
+})
+
+// ============================================================
+// VIDEO SUMBER
+// Tambahkan video lokal di sini. Format: 'NamaKategori-modul': 'path/ke/file.mp4'
+// Pastikan file video ada di folder yang sesuai.
+// ============================================================
+const videoSumber = {
+  'Internet of Things-1': 'videos/iot-modul-1.mp4',
+  // Contoh tambah video lain:
+  // 'Internet of Things-2': 'videos/iot-modul-2.mp4',
+  // 'Pemrograman-1':        'videos/pemrograman-modul-1.mp4',
+};
+
+// Video fallback jika belum ada file untuk modul tertentu
+const VIDEO_FALLBACK = 'https://www.w3schools.com/html/mov_bbb.mp4';
+
+// ============================================================
+// DATA SOAL KUIS
+// Tambahkan soal per kategori & modul di sini.
+// ============================================================
+const dataKuis = {
+  'Internet of Things': {
+    1: {
+      soal: 'Apa kepanjangan dari IoT?',
+      opsi: ['Internet of Things', 'Intranet of Tools', 'Interface of Technology', 'Integrated of Transfer'],
+    }
+  }
+  // Contoh tambah soal:
+  // 'Pemrograman': {
+  //   1: { soal: 'Apa itu variabel?', opsi: ['...', '...', '...', '...'] }
+  // }
+};
+
+// ============================================================
+// CEK PRETEST & PROGRESS
+// ============================================================
+function getBatasModul() {
+  const userData    = JSON.parse(localStorage.getItem('narfkit_user') || '{}');
+  const sudahPretest = userData.levelSelesai === true;
+  const skorPretest  = userData.skorAsesmen ? userData.skorAsesmen.total : 0;
+
+  let batasAwal = 1;
+  if (!sudahPretest) {
+    batasAwal = 0;
+    document.getElementById('peringatan-pretest').style.display = 'block';
+  } else if (skorPretest >= 70) {
+    batasAwal = 3;
+  } else if (skorPretest >= 40) {
+    batasAwal = 2;
+  }
+
+  return userData.progressTerakhir
+    ? Math.max(userData.progressTerakhir, batasAwal)
+    : batasAwal;
+}
+
+let batasModulTerbuka = getBatasModul();
+
+// ============================================================
+// DATA KATEGORI
+// ============================================================
+const ikonGembok = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>`;
+
+const dataCourse = [
+  { nama: 'Pemrograman',       icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>' },
+  { nama: 'Internet of Things', icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>' },
+  { nama: 'Machine Learning',  icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="10" rx="2"></rect><circle cx="12" cy="5" r="2"></circle><path d="M12 7v4"></path></svg>' },
+  { nama: 'Kewirausahaan',     icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>' },
+  { nama: 'Project Akhir',     icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>' }
+];
+
+// ============================================================
+// RENDER KATALOG
+// ============================================================
+function renderKatalog() {
+  const container = document.getElementById('katalog-container');
+  container.innerHTML = '';
+
+  dataCourse.forEach(cat => {
+    const section = document.createElement('div');
+    section.className = 'kategori-section';
+    section.innerHTML = `<h2 class="kategori-judul">${cat.nama}</h2><div class="modul-grid" id="grid-${cat.nama.replace(/\s/g,'')}"></div>`;
+    container.appendChild(section);
+
+    const grid = document.getElementById(`grid-${cat.nama.replace(/\s/g,'')}`);
+    for (let i = 1; i <= 5; i++) {
+      const isLocked   = i > batasModulTerbuka;
+      const cardClass  = isLocked ? 'modul-card locked' : 'modul-card';
+      const iconToShow = isLocked ? ikonGembok : cat.icon;
+      const clickAct   = isLocked
+        ? `alert('Modul terkunci! Selesaikan modul sebelumnya atau ikuti pre-test di Dashboard.')`
+        : `bukaMateri('${cat.nama}', ${i})`;
+
+      grid.innerHTML += `
+        <div class="${cardClass}" onclick="${clickAct}">
+          ${iconToShow}
+          <p>Modul ${i}</p>
+        </div>`;
+    }
+  });
+}
+
+// ============================================================
+// NAVIGASI: BUKA MATERI
+// ============================================================
+let currentKategori = '';
+let currentModul    = 1;
+let jawabanDipilih  = false;
+
+function bukaMateri(kategori, modulIndex) {
+  currentKategori = kategori;
+  currentModul    = modulIndex;
+
+  document.getElementById('view-katalog').classList.remove('active');
+
+  if (kategori === 'Project Akhir') {
+    document.getElementById('view-belajar').classList.remove('active');
+    document.getElementById('view-project').classList.add('active');
+    bukaProject(modulIndex);
+    return;
+  }
+
+  document.getElementById('view-project').classList.remove('active');
+  document.getElementById('view-belajar').classList.add('active');
+  document.getElementById('judul-materi-header').innerText = `${kategori} - Modul ${modulIndex}`;
+  document.getElementById('quiz-modul-nomor').innerText    = modulIndex;
+
+  muatVideo(kategori, modulIndex);
+  renderSidebarModul(modulIndex);
+  kunciKuis();
+}
+
+// ============================================================
+// FUNGSI KHUSUS PROJECT AKHIR
+// ============================================================
+function bukaProject(modulIndex) {
+  const data = dataProject[modulIndex];
+  if (!data) {
+    document.getElementById('project-judul').innerText = `Project Modul ${modulIndex}`;
+    document.getElementById('project-deskripsi').innerText = 'Konten project ini belum tersedia.';
+    return;
+  }
+
+  document.getElementById('project-judul').innerText = data.judul;
+  document.getElementById('project-deskripsi').innerText = data.deskripsi;
+
+  const guideList = document.getElementById('project-guide-list');
+  guideList.innerHTML = '';
+  data.panduan.forEach(step => {
+    const li = document.createElement('li');
+    li.innerText = step;
+    guideList.appendChild(li);
+  });
+
+  document.getElementById('link-laporan').href = data.formLaporan;
+  document.getElementById('link-video').href = data.formVideo;
+
+  // muat BMC & SWOT tersimpan
+  muatProjectTersimpan(modulIndex);
+}
+
+function simpanProject() {
+  const bmcFields = ['bmc-partners','bmc-activities','bmc-value','bmc-relationship','bmc-segments','bmc-resources','bmc-channels','bmc-cost','bmc-revenue'];
+  const swotFields = ['swot-s','swot-w','swot-o','swot-t'];
+
+  const dataSimpan = { bmc: {}, swot: {} };
+  bmcFields.forEach(id => dataSimpan.bmc[id] = document.getElementById(id).value);
+  swotFields.forEach(id => dataSimpan.swot[id] = document.getElementById(id).value);
+
+  localStorage.setItem(`narfkit_project_${currentModul}`, JSON.stringify(dataSimpan));
+
+  const status = document.getElementById('save-status');
+  status.innerText = '✓ Tersimpan!';
+  setTimeout(() => status.innerText = '', 2000);
+}
+
+function muatProjectTersimpan(modulIndex) {
+  const saved = localStorage.getItem(`narfkit_project_${modulIndex}`);
+  const allFields = ['bmc-partners','bmc-activities','bmc-value','bmc-relationship','bmc-segments','bmc-resources','bmc-channels','bmc-cost','bmc-revenue','swot-s','swot-w','swot-o','swot-t'];
+
+  // reset dulu
+  allFields.forEach(id => document.getElementById(id).value = '');
+
+  if (!saved) return;
+  const data = JSON.parse(saved);
+  Object.keys(data.bmc || {}).forEach(id => document.getElementById(id).value = data.bmc[id]);
+  Object.keys(data.swot || {}).forEach(id => document.getElementById(id).value = data.swot[id]);
+}
+
+// ============================================================
+// MUAT VIDEO LOKAL
+// ============================================================
+function muatVideo(kategori, modulIndex) {
+  const key    = `${kategori}-${modulIndex}`;
+  const src    = videoSumber[key] || VIDEO_FALLBACK;
+  const video  = document.getElementById('materi-video');
+
+  video.src        = src;
+  video.currentTime = 0;
+  video.load();
+}
+
+// ============================================================
+// RENDER SIDEBAR
+// ============================================================
+function renderSidebarModul(activeIdx) {
+  const sidebar  = document.getElementById('daftar-modul-container');
+  sidebar.innerHTML = '';
+
+  const svgLock  = `<svg class="icon-list" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>`;
+  const svgCheck = `<svg class="icon-list" viewBox="0 0 24 24" fill="none" stroke="#4dda90" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>`;
+  const svgPlay  = `<svg class="icon-list" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg>`;
+
+  for (let i = 1; i <= 5; i++) {
+    const isLocked  = i > batasModulTerbuka;
+    let   itemClass = 'item-modul';
+    if (isLocked)       itemClass += ' locked';
+    if (i === activeIdx) itemClass += ' active';
+
+    const icon      = isLocked ? svgLock : (i < activeIdx ? svgCheck : svgPlay);
+    const clickAct  = isLocked
+      ? `alert('Modul terkunci!')`
+      : `bukaMateri('${currentKategori}', ${i})`;
+
+    sidebar.innerHTML += `
+      <div class="${itemClass}" onclick="${clickAct}">
+        ${icon} Modul ${i} - ${currentKategori}
+      </div>`;
+  }
+}
+
+function kembaliKeKatalog() {
+  document.getElementById('view-belajar').classList.remove('active');
+  document.getElementById('view-project').classList.remove('active');
+  document.getElementById('view-katalog').classList.add('active');
+  document.getElementById('materi-video').pause();
+}
+
+// ============================================================
+// KUIS
+// ============================================================
+function kunciKuis() {
+  const area = document.getElementById('area-kuis');
+  area.style.opacity      = '0.5';
+  area.style.pointerEvents = 'none';
+  document.getElementById('soal-container').style.display = 'none';
+  document.getElementById('btn-submit-kuis').disabled     = true;
+  document.getElementById('teks-instruksi-kuis').innerText = 'Selesaikan video di atas untuk mengaktifkan kuis dan membuka modul berikutnya.';
+  document.querySelectorAll('.opsi-kuis').forEach(b => b.classList.remove('selected'));
+  jawabanDipilih = false;
+}
+
+function aktifkanKuis() {
+  const area = document.getElementById('area-kuis');
+  area.style.opacity      = '1';
+  area.style.pointerEvents = 'auto';
+  document.getElementById('teks-instruksi-kuis').innerText = 'Jawab pertanyaan berikut untuk lanjut:';
+
+  // Render soal sesuai kategori & modul
+  const kuisData      = (dataKuis[currentKategori] || {})[currentModul];
+  const soalContainer = document.getElementById('soal-container');
+  const opsiContainer = document.getElementById('opsi-container');
+  const tekssoal      = document.getElementById('teks-soal');
+  const huruf         = ['A','B','C','D'];
+
+  opsiContainer.innerHTML = '';
+
+  if (kuisData) {
+    tekssoal.innerText = '1. ' + kuisData.soal;
+    kuisData.opsi.forEach((opsi, idx) => {
+      const btn = document.createElement('button');
+      btn.className = 'opsi-kuis';
+      btn.onclick   = function() { pilihJawaban(this); };
+      btn.innerHTML = `<div class="opsi-huruf">${huruf[idx]}</div> ${opsi}`;
+      opsiContainer.appendChild(btn);
+    });
+  } else {
+    // Fallback: belum ada soal spesifik
+    tekssoal.innerText = '1. Apakah kamu sudah memahami materi pada modul ini?';
+    ['Sudah paham', 'Perlu diulang'].forEach((opsi, idx) => {
+      const btn = document.createElement('button');
+      btn.className = 'opsi-kuis';
+      btn.onclick   = function() { pilihJawaban(this); };
+      btn.innerHTML = `<div class="opsi-huruf">${huruf[idx]}</div> ${opsi}`;
+      opsiContainer.appendChild(btn);
+    });
+  }
+
+  soalContainer.style.display = 'block';
+}
+
+function pilihJawaban(elemen) {
+  document.querySelectorAll('.opsi-kuis').forEach(b => b.classList.remove('selected'));
+  elemen.classList.add('selected');
+  jawabanDipilih = true;
+  document.getElementById('btn-submit-kuis').disabled = false;
+}
+
+function selesaiKuis() {
+  if (!jawabanDipilih) return;
+
+  if (currentModul === batasModulTerbuka && batasModulTerbuka < 5) {
+    batasModulTerbuka++;
+    const userData = JSON.parse(localStorage.getItem('narfkit_user') || '{}');
+    userData.progressTerakhir = batasModulTerbuka;
+    localStorage.setItem('narfkit_user', JSON.stringify(userData));
+    renderKatalog();
+  }
+
+  alert('Kuis berhasil dikumpulkan! Modul selanjutnya sudah terbuka.');
+
+  if (currentModul < 5) {
+    bukaMateri(currentKategori, currentModul + 1);
+  } else {
+    alert('Selamat! Kamu sudah menyelesaikan semua modul di materi ini.');
+    kembaliKeKatalog();
+  }
+}
+
+// Init
+renderKatalog();
+</script>
+</body>
+</html>
